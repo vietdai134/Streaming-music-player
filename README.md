@@ -15,3 +15,10 @@ This application is utilized for educational, personal, and non-profit purposes.
 3. **Install Required Libraries**: Run the following command to install the necessary libraries for the project:
     ```bash
     pip install -r requirements.txt
+    ```
+4. **Run the Project**: After installing the necessary libraries, you can run the project by executing the following command:
+    ```bash
+    python UI.py
+    ```
+## Support
+If you encounter any issues during the installation or running of the project, please contact us at vietnguyentran134@gmail.com for assistance.
