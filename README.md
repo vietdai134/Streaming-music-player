@@ -5,7 +5,7 @@ This application is utilized for educational, personal, and non-profit purposes.
 
 ## Installation Guide
 
-1. **Install Python**: Ensure you have Python installed on your computer. If not, you can download Python from the official Python website and follow the installation instructions.
+1. **Install Python**: Ensure you have Python installed on your computer. If not, you can download Python from the official Python website:https://www.python.org/downloads/ and follow the installation instructions.
 
 2. **Install Package Manager (pip)**: The pip package manager usually comes with Python. However, ensure you have the latest version by upgrading pip:
     ```bash
