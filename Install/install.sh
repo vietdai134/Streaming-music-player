@@ -8,32 +8,33 @@ install_python3() {
     if [ $python_installed -eq 0 ]; then
         echo "Python 3 đã được cài đặt: $python_version"
     else
-        echo "Python 3 chưa được cài đặt. Đang cài đặt..."
-
-        # Kiểm tra và cài đặt Python 3 cho các bản phân phối phổ biến
-        if command -v apt-get >/dev/null 2>&1; then
-            # Cài đặt cho Ubuntu/Debian
-            sudo apt-get update
-            sudo apt-get install -y python3
-        elif command -v yum >/dev/null 2>&1; then
-            # Cài đặt cho CentOS/RHEL
-            sudo yum install -y python3
-        elif command -v zypper >/dev/null 2>&1; then
-            # Cài đặt cho openSUSE
-            sudo zypper install -y python3
-        elif command -v pacman >/dev/null 2>&1; then
-            # Cài đặt cho Arch Linux
-            sudo pacman -Sy python
-        elif command -v dnf >/dev/null 2>&1; then
-            # Cài đặt cho Fedora
-            sudo dnf install -y python3
-        else
-            echo "Không thể xác định bản phân phối Linux. Vui lòng cài đặt Python 3 thủ công."
-            return 1
-        fi
-
-        echo "Python 3 đã được cài đặt thành công!"
-    fi
+        echo "Python 3 chưa được cài đặt."
+        return 0;
+#
+#        # Kiểm tra và cài đặt Python 3 cho các bản phân phối phổ biến
+#        if command -v apt-get >/dev/null 2>&1; then
+#            # Cài đặt cho Ubuntu/Debian
+#            sudo apt-get update
+#            sudo apt-get install -y python3
+#        elif command -v yum >/dev/null 2>&1; then
+#            # Cài đặt cho CentOS/RHEL
+#            sudo yum install -y python3
+#        elif command -v zypper >/dev/null 2>&1; then
+#            # Cài đặt cho openSUSE
+#            sudo zypper install -y python3
+#        elif command -v pacman >/dev/null 2>&1; then
+#            # Cài đặt cho Arch Linux
+#            sudo pacman -Sy python
+#        elif command -v dnf >/dev/null 2>&1; then
+#            # Cài đặt cho Fedora
+#            sudo dnf install -y python3
+#        else
+#            echo "Không thể xác định bản phân phối Linux. Vui lòng cài đặt Python 3 thủ công."
+#            return 1
+#        fi
+#
+#        echo "Python 3 đã được cài đặt thành công!"
+#    fi
 }
 
 #!/bin/bash
@@ -104,10 +105,11 @@ install_python_packages() {
 }
 
 
-# Gọi hàm cài đặt Python 3
-install_python3
+## Gọi hàm cài đặt Python 3
+#install_python3
 
 # Gọi hàm cài đặt các gói Python
-install_python_packages
-
+if [$install_python3 -eq 1]; then
+  install_python_packages
+fi
 
