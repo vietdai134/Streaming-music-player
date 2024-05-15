@@ -22,9 +22,14 @@ This application is utilized for educational, personal, and non-profit purposes.
     ```
     
     For Linux:
-   1. **Make the script executable by running the following command**: chmod +x install.sh
-   2. **Run the script with the following command**: ./install.sh
-       ```
+   1. **Make the script executable by running the following command**: 
+   ```bash
+   chmod +x install.sh
+   ```
+   2. **Run the script with the following command**: 
+       ```bash
+      ./install.sh
+      ```
 
 5. **Run the Project**: After installing the necessary libraries, you can run the project by executing the following command:
     ```bash
