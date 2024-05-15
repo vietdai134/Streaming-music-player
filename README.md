@@ -4,7 +4,7 @@ The Streaming Music Player is an open-source software written in Python designed
 This application is utilized for educational, personal, and non-profit purposes.
 
 ## Installation Guide
-
+### Installation Guide For Windown
 1. **Install Python**: Ensure you have Python installed on your computer. If not, you can download Python from the official Python website: [https://www.python.org/downloads/](https://www.python.org/downloads/) and follow the installation instructions.
 
 2. **Install VLC Media Player**: Ensure you have VLC Media Player installed on your computer. If not, you can download VLC Media Player from the official website: [https://www.videolan.org/vlc/](https://www.videolan.org/vlc/) and follow the installation instructions.
@@ -22,15 +22,16 @@ This application is utilized for educational, personal, and non-profit purposes.
     ```
     
     For Linux:
-    ```bash
-    ./install_python.sh
-    ```
+   1. **Make the script executable by running the following command**: chmod +x install.sh
+   2. **Run the script with the following command**: ./install.sh
+       ```
 
 5. **Run the Project**: After installing the necessary libraries, you can run the project by executing the following command:
     ```bash
     python UI.py
     ```
 
+3. **Run the application**: python3 
 ## Support
 
 If you encounter any issues during the installation or running of the project, please contact us at vietnguyentran134@gmail.com for assistance.

@@ -6,10 +6,10 @@ install_python3() {
     python_installed=$?
 
     if [ $python_installed -eq 0 ]; then
-        echo "Python 3 đã được cài đặt: $python_version"
+        echo 1
     else
-        echo "Python 3 chưa được cài đặt."
-        return 0;
+      echo 0
+    fi
 #
 #        # Kiểm tra và cài đặt Python 3 cho các bản phân phối phổ biến
 #        if command -v apt-get >/dev/null 2>&1; then
@@ -105,11 +105,10 @@ install_python_packages() {
 }
 
 
-## Gọi hàm cài đặt Python 3
-#install_python3
+# Gọi hàm cài đặt Python 3
+install_python3_result=$( install_python3 )
 
 # Gọi hàm cài đặt các gói Python
-if [$install_python3 -eq 1]; then
+if [ "$install_python3_result" -eq 0 ]; then
   install_python_packages
 fi
-
